@@ -4,6 +4,12 @@ This repo holds android applications developed by me during the course of ***lea
 ## ToDoList
 #### *created an app to track list of tasks*
 >Android Studio (java & firebase real-time database)
+
+ <img src="https://github.com/OSKUDA/Android-Portfolio/blob/master/screenshots/todolistScreenshots/splash_screen.jpg" width="250"/>  <img src="https://github.com/OSKUDA/Android-Portfolio/blob/master/screenshots/todolistScreenshots/username_login.jpg" width="250"/> <img src="https://github.com/OSKUDA/Android-Portfolio/blob/master/screenshots/todolistScreenshots/dashboard.jpg" width="250"/>
+<img src="https://github.com/OSKUDA/Android-Portfolio/blob/master/screenshots/todolistScreenshots/new_task.jpg" width="250"/>
+ <img src="https://github.com/OSKUDA/Android-Portfolio/blob/master/screenshots/todolistScreenshots/dashboard1.jpg" width="250"/> <img src="https://github.com/OSKUDA/Android-Portfolio/blob/master/screenshots/todolistScreenshots/edit_task.jpg" width="250"/> <img src="https://github.com/OSKUDA/Android-Portfolio/blob/master/screenshots/todolistScreenshots/firebase_data.PNG" width="500"/>
+ 
+ 
 ### Specifications
 * App has *multiple* activity (Splash screen, username registration, dashboard, add task, edit task)
 * Username screen is only shown for first time user
