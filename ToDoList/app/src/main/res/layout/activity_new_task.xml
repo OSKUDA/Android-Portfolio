@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f4f4"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="198dp"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/titlePage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="28dp"
+                android:text="@string/create_new_task"
+                android:textAlignment="center"
+                android:textColor="#FFF"
+                android:textSize="26sp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="28dp"
+                android:background="#131E69"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="-40dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/bg_item_does"
+            android:orientation="vertical"
+            android:paddingTop="22dp"
+            android:paddingBottom="22dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/addTile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/add_title"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"/>
+                <EditText
+                    android:id="@+id/titleDoes"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/bt_input_task"
+                    android:paddingStart="12dp"
+                    android:textColorHint="#B5B5B5"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_height="45dp"
+                    android:hint="@string/what_you_do_want_to_do"
+                    android:inputType="text"
+                    android:maxLength="30"
+                    android:autofillHints="title"
+                    tools:ignore="RtlSymmetry" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/addDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/description"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"/>
+                <EditText
+                    android:id="@+id/descDoes"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/bt_input_task"
+                    android:paddingStart="12dp"
+                    android:textColorHint="#B5B5B5"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_height="45dp"
+                    android:hint="@string/how_do_you_do_that"
+                    android:maxLength="50"
+                    android:inputType="text"
+                    tools:ignore="RtlSymmetry"
+                    android:autofillHints="@string/description" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/addDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/target"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"/>
+                <EditText
+                    android:id="@+id/dateDoes"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/bt_input_task"
+                    android:paddingStart="12dp"
+                    android:textColorHint="#B5B5B5"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_height="45dp"
+                    android:hint="@string/eg_by_tomorrow_before_evening"
+                    android:inputType="text"
+                    android:maxLength="30"
+                    tools:ignore="RtlSymmetry,TextFields"
+                    android:autofillHints="@string/target" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSaveTask"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/create_now"
+            android:textColor="#FFF"
+            android:textAllCaps="false"
+            android:background="@drawable/bg_btn_save_task"
+            android:textSize="22sp"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            app:backgroundTint="@null"
+            android:padding="0dp"/>
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/cancel"
+            android:textColor="#AFAFAF"
+            android:textAllCaps="false"
+            android:background="@drawable/bg_btn_cancel"
+            android:textSize="22sp"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            app:backgroundTint="@null"
+            android:padding="0dp"/>
+
+
+    </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+
+
+</LinearLayout>

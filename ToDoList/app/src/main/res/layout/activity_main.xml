@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/colorPrimaryDark"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+        <ImageView
+            android:id="@+id/imageCompanyLogo"
+            android:layout_width="200dp"
+            android:layout_height="160dp"
+            android:src="@drawable/companylogo"
+            android:layout_gravity="center"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/mainAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/aladin"
+            android:text="@string/main_app_name"
+            android:textColor="@color/goldenShade"
+            android:textSize="50sp" />
+
+        <TextView
+            android:id="@+id/developerCredit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:fontFamily="@font/aclonica"
+            android:text="@string/developer_credits"
+            android:textColor="@color/fadedWhite"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

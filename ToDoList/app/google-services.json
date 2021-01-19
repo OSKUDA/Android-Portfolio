@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "364320968659",
+    "project_id": "doesapp-6e7ba",
+    "storage_bucket": "doesapp-6e7ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:364320968659:android:857bbd7aa54b03c007e926",
+        "android_client_info": {
+          "package_name": "io.github.oskuda.mydoes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "364320968659-3u4snatper9t1j4dbphujv9ors3bet5o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHXTlHyit6aywl7_0BjmQKodmMI-XdEm8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "364320968659-3u4snatper9t1j4dbphujv9ors3bet5o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

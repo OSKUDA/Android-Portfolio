@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">ToDoList</string>
+    <string name="main_app_name">To-Do-List</string>
+    <string name="developer_credits">Oskar K. Shrestha</string>
+    <string name="todo">TODO</string>
+    <string name="create_new_profile">Create new profile</string>
+    <string name="username">UserName</string>
+    <string name="add_unique_username">Add unique username</string>
+    <string name="create_now">Create Now</string>
+    <string name="my_tasks">My Tasks</string>
+    <string name="btn_plus">+</string>
+    <string name="no_more_task">No more task</string>
+    <string name="edit_task_details">Edit task details</string>
+    <string name="add_title">Add Title</string>
+    <string name="what_you_do_want_to_do">What you do want to do?</string>
+    <string name="description">Description</string>
+    <string name="how_do_you_do_that">How do you do that?</string>
+    <string name="when_will_you_finish_it">When will you finish it?</string>
+    <string name="target">Target</string>
+    <string name="save_update">Save Update</string>
+    <string name="delete">Delete</string>
+    <string name="create_new_task">Create new task</string>
+    <string name="eg_by_tomorrow_before_evening">eg: by tomorrow; before evening</string>
+    <string name="cancel">Cancel</string>
+</resources>
