@@ -5,9 +5,9 @@ This repo holds android applications developed by me during the course of ***lea
 #### *created an app to track list of tasks*
 >Android Studio (java & firebase real-time database)
 
- <img src="https://github.com/OSKUDA/Android-Portfolio/blob/master/screenshots/todolistScreenshots/splash_screen.jpg" width="250"/>  <img src="https://github.com/OSKUDA/Android-Portfolio/blob/master/screenshots/todolistScreenshots/username_login.jpg" width="250"/> <img src="https://github.com/OSKUDA/Android-Portfolio/blob/master/screenshots/todolistScreenshots/dashboard.jpg" width="250"/>
-<img src="https://github.com/OSKUDA/Android-Portfolio/blob/master/screenshots/todolistScreenshots/new_task.jpg" width="250"/>
- <img src="https://github.com/OSKUDA/Android-Portfolio/blob/master/screenshots/todolistScreenshots/dashboard1.jpg" width="250"/> <img src="https://github.com/OSKUDA/Android-Portfolio/blob/master/screenshots/todolistScreenshots/edit_task.jpg" width="250"/> <img src="https://github.com/OSKUDA/Android-Portfolio/blob/master/screenshots/todolistScreenshots/firebase_data.PNG" width="500"/>
+ <img src="https://github.com/OSKUDA/Android-Portfolio/blob/master/screenshots/todolistScreenshots/splash_screen.jpg" width="180"/>  <img src="https://github.com/OSKUDA/Android-Portfolio/blob/master/screenshots/todolistScreenshots/username_login.jpg" width="180"/> <img src="https://github.com/OSKUDA/Android-Portfolio/blob/master/screenshots/todolistScreenshots/dashboard.jpg" width="180"/><br>
+<img src="https://github.com/OSKUDA/Android-Portfolio/blob/master/screenshots/todolistScreenshots/new_task.jpg" width="180"/>
+ <img src="https://github.com/OSKUDA/Android-Portfolio/blob/master/screenshots/todolistScreenshots/dashboard1.jpg" width="180"/> <img src="https://github.com/OSKUDA/Android-Portfolio/blob/master/screenshots/todolistScreenshots/edit_task.jpg" width="180"/> <img src="https://github.com/OSKUDA/Android-Portfolio/blob/master/screenshots/todolistScreenshots/firebase_data.PNG" width="300"/>
  
  
 ### Specifications
