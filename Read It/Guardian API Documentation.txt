@@ -1,0 +1,40 @@
+
+api-key=54a5bc5a-dfad-4ce8-b769-b7230b52f674
+
+ENDPOINTS:
+	CONTENT: https://content.guardianapis.com/search
+
+FORMAT: format=json
+
+QUERY TERM: 
+	q	Request content containing this free text. Supports AND, OR and NOT operators, and exact phrase queries using double quotes.	String
+	query-fields	Specify in which indexed fields query terms should be searched on	String list
+
+
+QUERY FILTERS:
+	section	Return only content in those sections String
+	tag	Return only content with those tags	String
+	lang	Return only content in those languages	String
+
+ORDERING:
+	order-by	Returns results in the specified order	String
+		newest - Default in all other cases
+		oldest
+		relevance - Default where q parameter is specified
+
+ADDITIONAL INFORMATION:
+	show-fields	Add fields associated with the content	String list
+		headline		String (HTML)
+		body		String (HTML)
+		starRating		String (Integer)
+		thumbnail		String
+
+	show-tags	Add associated metadata tags	String list
+	contributor
+
+
+
+
+
+
+

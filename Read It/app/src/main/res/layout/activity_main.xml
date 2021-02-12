@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/primary">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerInParent="true">
+        <ImageView
+            android:id="@+id/splash_screen_company_logo"
+            android:layout_width="200dp"
+            android:layout_height="160dp"
+            android:src="@drawable/companylogo"/>
+
+        <TextView
+            android:id="@+id/splash_screen_app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aladin"
+            android:text="Read It"
+            android:textColor="@color/primary_text"
+            android:textSize="50sp" />
+
+        <TextView
+            android:id="@+id/splash_screen_creator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aclonica"
+            android:text="Oskar K. Shrestha"
+            android:textColor="@color/primary_text"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+
+
+
+
+</RelativeLayout>
