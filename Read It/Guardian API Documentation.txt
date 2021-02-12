@@ -1,5 +1,4 @@
 
-api-key=54a5bc5a-dfad-4ce8-b769-b7230b52f674
 
 ENDPOINTS:
 	CONTENT: https://content.guardianapis.com/search
