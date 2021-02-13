@@ -9,7 +9,12 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/*
+CLASS DESCRIPTION: This class uses multi threading to download data form API on background thread.
+                   It calls GetRawData with generated URL and receive it back on callBack method onDownloadComplete.
+FUNCTION: To parse JSON data received from GetRawData into NewsArticle object.
+          Generate valid URI.
+ */
 public class GetJsonByContent extends AsyncTask<String,Void, List<NewsArticle>> implements GetRawData.OnDownloadComplete {
     private static final String TAG = "GetJsonByContent";
 
@@ -17,7 +22,7 @@ public class GetJsonByContent extends AsyncTask<String,Void, List<NewsArticle>> 
     API KEY FOR GUARDIAN API
     PRIVATE KEY
      */
-    private static final String API_KEY = "api-key=54a5bc5a-dfad-4ce8-b769-b7230b52f674";
+    private static final String API_KEY = "api-key=";//TODO: Enter your API key here
     private static final String BASE_URL = "https://content.guardianapis.com/search";
     private static final String SHOW_FIELDS = "headline,thumbnail";
 

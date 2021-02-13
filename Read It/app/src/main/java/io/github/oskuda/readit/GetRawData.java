@@ -10,7 +10,11 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 enum DownloadStatus{IDLE,PROCESSING,NOT_INITIALIZED,FAILED_OR_EMPTY,OK}
-
+/*
+CLASS DESCRIPTION: This class downloads data over the internet using HttpUrlConnection.
+                   Checks for Exception and act accordingly.
+                   Sends data downloaded back to calling object using callBack method OnDownloadComplete.
+ */
 public class GetRawData {
     private static final String TAG = "GetRawData";
 
