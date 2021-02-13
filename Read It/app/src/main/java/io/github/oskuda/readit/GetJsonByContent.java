@@ -15,34 +15,34 @@ CLASS DESCRIPTION: This class uses multi threading to download data form API on 
 FUNCTION: To parse JSON data received from GetRawData into NewsArticle object.
           Generate valid URI.
  */
-public class GetJsonByContent extends AsyncTask<String,Void, List<NewsArticle>> implements GetRawData.OnDownloadComplete {
+public class GetJsonByContent extends AsyncTask<String,Void, ArrayList<NewsArticle>> implements GetRawData.OnDownloadComplete {
     private static final String TAG = "GetJsonByContent";
 
     /*
     API KEY FOR GUARDIAN API
     PRIVATE KEY
      */
-    private static final String API_KEY = "api-key=";//TODO: Enter your API key here
+    private static final String API_KEY = "api-key=54a5bc5a-dfad-4ce8-b769-b7230b52f674";//TODO: Enter your API key here
     private static final String BASE_URL = "https://content.guardianapis.com/search";
     private static final String SHOW_FIELDS = "headline,thumbnail";
 
-    private String mSearchQuery;
-    private String mTag;
-    private String mPageNumber;
-    private String mPageSize;
-    private String mOrderBy;
+    private final String mSearchQuery;
+    private final String mTag;
+    private final String mPageNumber;
+    private final String mPageSize;
+    private final String mOrderBy;
 
     //callback variable
     OnDataAvailable mCallback;
     //List to hold newsArticle object
-    private List<NewsArticle> mNewsArticleList;
+    private ArrayList<NewsArticle> mNewsArticleList;
 
     /*
     OnDataAvailable interface is used as callback method to calling object
     It helps perform task after Json data is parsed into mNewsArticleList
      */
     interface OnDataAvailable{
-        void onDataAvailable(List<NewsArticle> newsArticleList,DownloadStatus downloadStatus);
+        void onDataAvailable(ArrayList<NewsArticle> newsArticleList,DownloadStatus downloadStatus);
     }
 
     public GetJsonByContent(OnDataAvailable mCallback,String searchQuery, String tag, String pageNumber, String pageSize, String orderBy) {
@@ -55,7 +55,7 @@ public class GetJsonByContent extends AsyncTask<String,Void, List<NewsArticle>> 
     }
 
     @Override
-    protected void onPostExecute(List<NewsArticle> newsArticles) {
+    protected void onPostExecute(ArrayList<NewsArticle> newsArticles) {
         Log.d(TAG, "onPostExecute: starts");
         super.onPostExecute(newsArticles);
         if(mCallback!=null){
@@ -65,7 +65,7 @@ public class GetJsonByContent extends AsyncTask<String,Void, List<NewsArticle>> 
     }
 
     @Override
-    protected List<NewsArticle> doInBackground(String... strings) {
+    protected ArrayList<NewsArticle> doInBackground(String... strings) {
         Log.d(TAG, "doInBackground: starts");
         GetRawData getRawData = new GetRawData(this);
         getRawData.runInSameThread(strings[0]);
@@ -106,9 +106,6 @@ public class GetJsonByContent extends AsyncTask<String,Void, List<NewsArticle>> 
                 mDownloadStatus = DownloadStatus.FAILED_OR_EMPTY;
             }
         }
-
-
-
         Log.d(TAG, "onDownloadComplete: ends");
     }
 

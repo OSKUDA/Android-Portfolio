@@ -58,8 +58,6 @@ public class Dashboard extends AppCompatActivity {
         endPage.setTypeface(MLight);
         btnAddNew.setTypeface(MLight);
 
-
-
         //set username
         //sharedPreferences code
         //SharedPreferences to store userName locally

@@ -49,6 +49,7 @@ public class UserLogin extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
         //firebase code
+
         reference = FirebaseDatabase.getInstance().getReference().child("DoesApp");
         userNames = new ArrayList<>();
         reference.addListenerForSingleValueEvent(new ValueEventListener() {

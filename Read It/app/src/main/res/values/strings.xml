@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Read It</string>
+    
+    
+    //data for spinner
+    <string-array name="order_by_array">
+        <item>relevance</item>
+        <item>newest</item>
+        <item>oldest</item>
+    </string-array>
 </resources>
