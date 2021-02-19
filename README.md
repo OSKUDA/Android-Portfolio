@@ -41,6 +41,7 @@ This repo holds android applications developed by me during the course of ***lea
 * API feeds the app with news using *custom query*
 * Uses *httpUrlConnection* to request search query and fetch result
 * Search query are stored locally using *sharedPreferences*
+* Uses *Picasso* library for caching and downloading image files
 * On startUp last known query is loaded up
 * Received data is on Json format
 * Uses *JSON.org* and *Jsoup* to parse json and html data
