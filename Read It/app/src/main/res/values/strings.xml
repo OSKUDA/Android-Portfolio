@@ -1,7 +1,19 @@
 <resources>
     <string name="app_name">Read It</string>
-    
-    
+    <string name="news_article_image">News Article Image</string>
+    <string name="search">Search</string>
+    <string name="search_query">Search query</string>
+    <string name="eg_covid_cases_in_nepal">eg: Covid cases in Nepal</string>
+    <string name="region">Region</string>
+    <string name="eg_world_nepal_india">eg: World, Nepal, India</string>
+    <string name="order_by">Order by</string>
+    <string name="submit">SUBMIT</string>
+    <string name="company_logo">company logo</string>
+    <string name="read_it">Read It</string>
+    <string name="oskar_k_shrestha">Oskar K. Shrestha</string>
+    <string name="empty_news_message">Didn\'t find what you were looking for! :-(\nTry different search query</string>
+
+
     //data for spinner
     <string-array name="order_by_array">
         <item>relevance</item>

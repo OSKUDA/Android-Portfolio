@@ -32,6 +32,10 @@ public class NewsArticle implements Serializable {
         return mImageUri;
     }
 
+    public String dateFormatter() {
+        return this.getPublicationDate().replaceAll("[TZ]", " ");
+    }
+
     @Override
     public String toString() {
         return "NewsArticle{" +

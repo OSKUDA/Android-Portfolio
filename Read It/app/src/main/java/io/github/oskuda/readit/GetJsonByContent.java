@@ -9,13 +9,14 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+
 /*
 CLASS DESCRIPTION: This class uses multi threading to download data form API on background thread.
                    It calls GetRawData with generated URL and receive it back on callBack method onDownloadComplete.
 FUNCTION: To parse JSON data received from GetRawData into NewsArticle object.
           Generate valid URI.
  */
-public class GetJsonByContent extends AsyncTask<String,Void, ArrayList<NewsArticle>> implements GetRawData.OnDownloadComplete {
+public class GetJsonByContent extends AsyncTask<String, Void, ArrayList<NewsArticle>> implements GetRawData.OnDownloadComplete {
     private static final String TAG = "GetJsonByContent";
 
     /*
@@ -41,11 +42,11 @@ public class GetJsonByContent extends AsyncTask<String,Void, ArrayList<NewsArtic
     OnDataAvailable interface is used as callback method to calling object
     It helps perform task after Json data is parsed into mNewsArticleList
      */
-    interface OnDataAvailable{
-        void onDataAvailable(ArrayList<NewsArticle> newsArticleList,DownloadStatus downloadStatus);
+    interface OnDataAvailable {
+        void onDataAvailable(ArrayList<NewsArticle> newsArticleList, DownloadStatus downloadStatus);
     }
 
-    public GetJsonByContent(OnDataAvailable mCallback,String searchQuery, String tag, String pageNumber, String pageSize, String orderBy) {
+    public GetJsonByContent(OnDataAvailable mCallback, String searchQuery, String tag, String pageNumber, String pageSize, String orderBy) {
         this.mCallback = mCallback;
         mSearchQuery = searchQuery;
         mTag = tag;
@@ -58,8 +59,8 @@ public class GetJsonByContent extends AsyncTask<String,Void, ArrayList<NewsArtic
     protected void onPostExecute(ArrayList<NewsArticle> newsArticles) {
         Log.d(TAG, "onPostExecute: starts");
         super.onPostExecute(newsArticles);
-        if(mCallback!=null){
-            mCallback.onDataAvailable(mNewsArticleList,DownloadStatus.OK);
+        if (mCallback != null) {
+            mCallback.onDataAvailable(mNewsArticleList, DownloadStatus.OK);
         }
         Log.d(TAG, "onPostExecute: ends");
     }
@@ -76,40 +77,40 @@ public class GetJsonByContent extends AsyncTask<String,Void, ArrayList<NewsArtic
 
     @Override
     public void onDownloadComplete(String data, DownloadStatus mDownloadStatus) {
-        Log.d(TAG, "onDownloadComplete: starts with status: "+mDownloadStatus);
+        Log.d(TAG, "onDownloadComplete: starts with status: " + mDownloadStatus);
 
-        if(mDownloadStatus==DownloadStatus.OK){
+        if (mDownloadStatus == DownloadStatus.OK) {
             mNewsArticleList = new ArrayList<>();
-            try{
+            try {
                 JSONObject jsonObject = new JSONObject(data);
                 JSONObject jsonResponse = jsonObject.getJSONObject("response");
                 JSONArray itemArray = jsonResponse.getJSONArray("results");
 
-                for(int i=0;i<itemArray.length();i++){
+                for (int i = 0; i < itemArray.length(); i++) {
                     JSONObject newsArticle = itemArray.getJSONObject(i);
 
                     String id = newsArticle.getString("id");
-                    Log.d(TAG, "onDownloadComplete: id"+id);
+                    Log.d(TAG, "onDownloadComplete: id" + id);
                     String publicationDate = newsArticle.getString("webPublicationDate");
 
                     JSONObject fields = newsArticle.getJSONObject("fields");
                     String headline = fields.getString("headline");
                     String imageUri = fields.getString("thumbnail");
 
-                    NewsArticle newsArticleObj = new NewsArticle(id,publicationDate,headline,imageUri);
+                    NewsArticle newsArticleObj = new NewsArticle(id, publicationDate, headline, imageUri);
                     mNewsArticleList.add(newsArticleObj);
 
-                    Log.d(TAG, "onDownloadComplete: added: "+newsArticle.toString());
+                    Log.d(TAG, "onDownloadComplete: added: " + newsArticle.toString());
                 }
-            }catch (JSONException e){
-                Log.e(TAG, "onDownloadComplete: JSONException caught: "+e.getMessage());
+            } catch (JSONException e) {
+                Log.e(TAG, "onDownloadComplete: JSONException caught: " + e.getMessage());
                 mDownloadStatus = DownloadStatus.FAILED_OR_EMPTY;
             }
         }
         Log.d(TAG, "onDownloadComplete: ends");
     }
 
-    public String urlGenerator(){
+    public String urlGenerator() {
         Log.d(TAG, "urlGenerator: starts");
 
         //generate uri
@@ -119,7 +120,7 @@ public class GetJsonByContent extends AsyncTask<String,Void, ArrayList<NewsArtic
                 .append("&").append("page-size=").append(this.getPageSize()).append("&format=json&")
                 .append("order-by=").append(this.getOrderBy()).append("&").append("show-fields=").append(SHOW_FIELDS)
                 .append("&").append(API_KEY);
-        Log.d(TAG, "urlGenerator: returns with: "+resultUri.toString());
+        Log.d(TAG, "urlGenerator: returns with: " + resultUri.toString());
         return resultUri.toString();
     }
 

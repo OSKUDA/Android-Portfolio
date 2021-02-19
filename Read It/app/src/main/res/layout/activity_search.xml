@@ -4,31 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SearchActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".SearchActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/search_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
         android:background="@color/primary"
-        app:titleTextColor="@color/icons"
         android:elevation="0dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextColor="@color/icons" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:orientation="horizontal"
-        android:background="@color/primary">
+        android:background="@color/primary"
+        android:orientation="horizontal">
+
         <TextView
             android:id="@+id/txtSearchTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Search"
+            android:text="@string/search"
             android:textAlignment="center"
-            android:textSize="40sp"/>
-        
+            android:textSize="40sp" />
+
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
@@ -42,82 +44,93 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
                 android:orientation="vertical">
+
                 <TextView
                     android:id="@+id/txtSearchQuery"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:text="Search query"
+                    android:text="@string/search_query"
                     android:textColor="@color/primary_text"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp" />
+
                 <EditText
                     android:id="@+id/editTxtSearchQuery"
                     android:layout_width="match_parent"
-                    android:background="@drawable/bt_input_task"
-                    android:paddingStart="12dp"
-                    android:textColorHint="#B5B5B5"
-                    android:textColor="@color/primary_text"
                     android:layout_height="45dp"
-                    android:hint="eg: Covid cases in Nepal"
+                    android:autofillHints="title"
+                    android:background="@drawable/bt_input_task"
+                    android:hint="@string/eg_covid_cases_in_nepal"
                     android:inputType="text"
                     android:maxLength="30"
-                    android:autofillHints="title"/>
+                    android:paddingStart="12dp"
+                    android:textColor="@color/primary_text"
+                    android:textColorHint="#B5B5B5"
+                    tools:ignore="RtlSymmetry" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
                 android:orientation="vertical">
+
                 <TextView
                     android:id="@+id/txtRegion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:text="Region"
+                    android:text="@string/region"
                     android:textColor="@color/primary_text"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp" />
+
                 <EditText
                     android:id="@+id/editTxtRegion"
                     android:layout_width="match_parent"
-                    android:background="@drawable/bt_input_task"
-                    android:paddingStart="12dp"
-                    android:textColorHint="#B5B5B5"
-                    android:textColor="@color/primary_text"
                     android:layout_height="45dp"
-                    android:hint="eg: World, Nepal, India"
+                    android:autofillHints="country"
+                    android:background="@drawable/bt_input_task"
+                    android:hint="@string/eg_world_nepal_india"
                     android:inputType="text"
                     android:maxLength="30"
-                    android:autofillHints="country"/>
+                    android:paddingStart="12dp"
+                    android:textColor="@color/primary_text"
+                    android:textColorHint="#B5B5B5"
+                    tools:ignore="RtlSymmetry" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
                 android:layout_marginBottom="15dp"
                 android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/txtOrderBy"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:text="Order by"
+                    android:text="@string/order_by"
                     android:textColor="@color/primary_text"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp" />
+
                 <Spinner
                     android:id="@+id/spinnerOrderBy"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content" />
 
             </LinearLayout>
 
@@ -125,19 +138,16 @@
         </LinearLayout>
 
 
-
-        
-
-
     </androidx.cardview.widget.CardView>
+
     <Button
         android:id="@+id/btnSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:text="SUBMIT"
-        android:textSize="18sp"
+        android:text="@string/submit"
         android:textColor="@color/icons"
-        android:layout_gravity="center"/>
+        android:textSize="18sp" />
 
 </LinearLayout>

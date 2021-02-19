@@ -27,20 +27,18 @@ public class SearchActivity extends AppCompatActivity {
     private static final String TAG = "SearchActivity";
 
     //variables for view components
-    TextView txtSearchTitle,txtSearchQuery,txtRegion,txtOrderBy;
-    EditText editTxtSearchQuery,editTxtRegion;
+    TextView txtSearchTitle, txtSearchQuery, txtRegion, txtOrderBy;
+    EditText editTxtSearchQuery, editTxtRegion;
     Spinner spinnerOrderBy;
     Button btnSubmit;
 
     //userInput data holder
-    String searchQuery,region,orderBy;
+    String searchQuery, region, orderBy;
 
     //KEY for sharedPreference
     private static final String SEARCH_QUERY = "SEARCH_QUERY";
     private static final String REGION = "REGION";
     private static final String ORDER_BY = "ORDER_BY";
-
-
 
 
     @Override
@@ -72,8 +70,8 @@ public class SearchActivity extends AppCompatActivity {
         spinnerOrderBy = findViewById(R.id.spinnerOrderBy);
 
         //custom fonts
-        Typeface MMedium = Typeface.createFromAsset(getAssets(),"fonts/Montserrat-Medium.ttf");
-        Typeface MLight = Typeface.createFromAsset(getAssets(),"fonts/Montserrat-Light.ttf");
+        Typeface MMedium = Typeface.createFromAsset(getAssets(), "fonts/Montserrat-Medium.ttf");
+        Typeface MLight = Typeface.createFromAsset(getAssets(), "fonts/Montserrat-Light.ttf");
 
         //assign fonts to view components
         txtSearchTitle.setTypeface(MMedium);
@@ -95,26 +93,25 @@ public class SearchActivity extends AppCompatActivity {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(validateInput()){
+                if (validateInput()) {
                     searchQuery = formatQuery(editTxtSearchQuery.getText().toString());
-                    Log.d(TAG, "onClick: searchQueryBuilt is ==>"+searchQuery);
+                    Log.d(TAG, "onClick: searchQueryBuilt is ==>" + searchQuery);
                     region = formatRegion(editTxtRegion.getText().toString().toLowerCase());
-                    Log.d(TAG, "onClick: regionBuilt is ==>"+region);
-                    TextView selectionView = (TextView)spinnerOrderBy.getSelectedView();
+                    Log.d(TAG, "onClick: regionBuilt is ==>" + region);
+                    TextView selectionView = (TextView) spinnerOrderBy.getSelectedView();
                     orderBy = selectionView.getText().toString();
-                    Log.d(TAG, "onClick: orderByBuilt is ==>"+orderBy);
+                    Log.d(TAG, "onClick: orderByBuilt is ==>" + orderBy);
 
                     SharedPreferences sharedPreferences = getSharedPreferences("local_db", Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedPreferences.edit();
 
-                    editor.putString(SEARCH_QUERY,searchQuery);
-                    editor.putString(REGION,region);
-                    editor.putString(ORDER_BY,orderBy);
+                    editor.putString(SEARCH_QUERY, searchQuery);
+                    editor.putString(REGION, region);
+                    editor.putString(ORDER_BY, orderBy);
                     editor.apply();
 
                     //kill the activity
                     finish();
-
 
 
                 }
@@ -123,55 +120,60 @@ public class SearchActivity extends AppCompatActivity {
 
         Log.d(TAG, "onCreate: ends");
     }
-    private boolean validateInput(){
+
+    private boolean validateInput() {
         //check if all fields are filled
-        if(editTxtSearchQuery.getText().toString().equals("") || editTxtRegion.getText().toString().equals("")){
+        if (editTxtSearchQuery.getText().toString().equals("") || editTxtRegion.getText().toString().equals("")) {
             Toast.makeText(this, "Fill all fields", Toast.LENGTH_LONG).show();
             return false;
         }
         //check if special characters are entered
-        else if(hasSpecialCharacter(editTxtSearchQuery.getText().toString()) || hasSpecialCharacter(editTxtRegion.getText().toString())){
+        else if (hasSpecialCharacter(editTxtSearchQuery.getText().toString()) || hasSpecialCharacter(editTxtRegion.getText().toString())) {
             Toast.makeText(this, "Don't enter special characters such as !,@,#,$...", Toast.LENGTH_LONG).show();
             return false;
         }
         //check if region has numbers
-        else if(!hasRequiredRegion(editTxtRegion.getText().toString())){
+        else if (!hasRequiredRegion(editTxtRegion.getText().toString())) {
             Toast.makeText(this, "Invalid region!", Toast.LENGTH_LONG).show();
             return false;
-        }else{
+        } else {
             return true;
         }
     }
-    private boolean hasSpecialCharacter(String data){
-        for(int i=0;i<data.length();i++){
-            int testChar = (int)data.charAt(i);
-            if(!((testChar>=48 && testChar<=57) || (testChar==32) ||(testChar>=65 && testChar<=90) || (testChar>=97 && testChar<=122))){
+
+    private boolean hasSpecialCharacter(String data) {
+        for (int i = 0; i < data.length(); i++) {
+            int testChar = (int) data.charAt(i);
+            if (!((testChar >= 48 && testChar <= 57) || (testChar == 32) || (testChar >= 65 && testChar <= 90) || (testChar >= 97 && testChar <= 122))) {
                 return true;
             }
         }
         return false;
     }
-    private boolean hasRequiredRegion(String data){
-        for(int i=0;i<data.length();i++){
-            int testChar = (int)data.charAt(i);
-            if(!((testChar>=65 && testChar<=90) || (testChar>=97 && testChar<=122))){
+
+    private boolean hasRequiredRegion(String data) {
+        for (int i = 0; i < data.length(); i++) {
+            int testChar = (int) data.charAt(i);
+            if (!((testChar >= 65 && testChar <= 90) || (testChar >= 97 && testChar <= 122))) {
                 return false;
             }
         }
         return true;
     }
-    private String formatQuery(String data){
+
+    private String formatQuery(String data) {
         StringBuilder result = new StringBuilder();
-        for(int i=0;i<data.length();i++){
-            if(((int)data.charAt(i))==32){
+        for (int i = 0; i < data.length(); i++) {
+            if (((int) data.charAt(i)) == 32) {
                 result.append("%20");
-            }else{
+            } else {
                 result.append(data.charAt(i));
             }
         }
         return result.toString();
     }
-    private String formatRegion(String data){
-        return ("world/"+data);
+
+    private String formatRegion(String data) {
+        return ("world/" + data);
     }
 }

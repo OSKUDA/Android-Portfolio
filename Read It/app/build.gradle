@@ -38,4 +38,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     //picasso dependency
     implementation 'com.squareup.picasso:picasso:2.8'
+    //jsoup dependency
+    implementation 'org.jsoup:jsoup:1.13.1'
 }
