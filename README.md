@@ -59,3 +59,21 @@ This repo holds android applications developed by me during the course of ***lea
 * Generate and work on *custom theme* including day/night mode
 * Design *custom layout* for txtView, editText and ImageView widgets 
 * Learned about *backward app compatibility* and how to deal with older versions
+
+## AudioRecorder
+#### *created an app to record & playback audio*
+>Android Studio (java & sqlite3)
+
+ <img src="https://github.com/OSKUDA/Android-Portfolio/blob/master/screenshots/audiorecorderScreenshots/Screenshot_2021-05-24-21-42-34-704_io.github.oskuda.audiorecorder.jpg" width="180"/> <img src="https://github.com/OSKUDA/Android-Portfolio/blob/master/screenshots/audiorecorderScreenshots/Screenshot_2021-05-24-21-43-01-108_io.github.oskuda.audiorecorder.jpg" width="180"/> <img src="https://github.com/OSKUDA/Android-Portfolio/blob/master/screenshots/audiorecorderScreenshots/Screenshot_2021-05-24-21-43-52-377_io.github.oskuda.audiorecorder.jpg" width="180"/> <img src="https://github.com/OSKUDA/Android-Portfolio/blob/master/screenshots/audiorecorderScreenshots/Screenshot_2021-05-24-21-44-32-858_io.github.oskuda.audiorecorder.jpg" width="180"/> <img src="https://github.com/OSKUDA/Android-Portfolio/blob/master/screenshots/audiorecorderScreenshots/Screenshot_2021-05-24-21-45-16-964_io.github.oskuda.audiorecorder.jpg" width="500"/>
+ 
+ 
+### Specifications
+* App Database is implemented using *sqlite3*
+* It performs all the *CRUD (Create, Read, Update, Delete) operations*
+* Uses *Cursor* and *SQLiteOpenHelper* class to implement CRUD
+* *MediaRecorder* and *MediaPlayer* is used for record and playback of audio
+* Database schema is designed to *track audio files*, store relevant *meta-data* of files, and feed data to recycler view
+* Audio files are stored in '.3gp' format
+
+### What I learned?
+* 
