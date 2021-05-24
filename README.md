@@ -71,9 +71,16 @@ This repo holds android applications developed by me during the course of ***lea
 * App Database is implemented using *sqlite3*
 * It performs all the *CRUD (Create, Read, Update, Delete) operations*
 * Uses *Cursor* and *SQLiteOpenHelper* class to implement CRUD
+* Uses *tab & viewPager2* for swipable and tabbed UI
 * *MediaRecorder* and *MediaPlayer* is used for record and playback of audio
-* Database schema is designed to *track audio files*, store relevant *meta-data* of files, and feed data to recycler view
+* Database schema is designed to *track audio files*, store relevant *meta-data*, and provide data for recycler view
 * Audio files are stored in '.3gp' format
+* Considers *orientation change* to preserve app lifecycle state
 
 ### What I learned?
-* 
+* Implement *tab & viewPager2* UI
+* Work with *fragments and its lifecycle*
+* Design and implement custom *Dialog fragments*
+* Store, handle, and retrieve audio files
+* Preserve state on *Orientation change* and handle activity-fragment lifecycle
+* 5 minutes of reading documentation can save you 6 hours of debugging
