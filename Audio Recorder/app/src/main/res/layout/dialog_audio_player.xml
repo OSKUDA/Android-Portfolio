@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txt_view_file_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="File Title" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar_audio_player"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_view_file_title" />
+
+    <TextView
+        android:id="@+id/txt_view_current_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/progress_bar_audio_player"
+        app:layout_constraintTop_toBottomOf="@+id/progress_bar_audio_player"
+        tools:text="00:00" />
+
+    <TextView
+        android:id="@+id/txt_view_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txt_view_current_time"
+        app:layout_constraintEnd_toEndOf="@+id/progress_bar_audio_player"
+        tools:text="10:99" />
+
+    <ImageView
+        android:id="@+id/image_button_player_play"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/txt_view_duration"
+        app:layout_constraintStart_toEndOf="@+id/txt_view_current_time"
+        app:layout_constraintTop_toBottomOf="@+id/progress_bar_audio_player"
+        app:srcCompat="@drawable/ic_play"
+        android:contentDescription="@string/txt_image_description_dummy" />
+
+    <ImageView
+        android:id="@+id/image_button_player_forward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/image_button_player_play"
+        app:layout_constraintTop_toBottomOf="@+id/progress_bar_audio_player"
+        app:srcCompat="@drawable/ic_forward"
+        android:contentDescription="@string/txt_image_description_dummy" />
+
+    <ImageView
+        android:id="@+id/image_button_player_rewind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:scaleX="-1"
+        app:layout_constraintEnd_toStartOf="@+id/image_button_player_play"
+        app:layout_constraintTop_toBottomOf="@+id/progress_bar_audio_player"
+        app:srcCompat="@drawable/ic_backward"
+        android:contentDescription="@string/txt_image_description_dummy" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

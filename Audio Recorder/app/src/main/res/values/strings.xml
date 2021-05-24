@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Audio Recorder</string>
+    <string name="tab_text_record">Record</string>
+    <string name="tab_text_saved_recording">Saved Recordings</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fab_text_record_start">Tap the button to start recording</string>
+    <string name="fab_text_record_stop">Tap the button to stop recording</string>
+    <string name="ok">OK</string>
+    <string name="cancel">CANCEL</string>
+    <string name="txt_file_name">File Name</string>
+    <string name="txt_file_description">File Description</string>
+    <string name="txt_file_id">File</string>
+    <string name="txt_edt_hint_file_name">Enter file name</string>
+    <string name="txt_edt_hint_file_description">Enter short description</string>
+    <string name="btn_txt_discard_audio">Discard</string>
+    <string name="btn_txt_save_audio">Save</string>
+    <string name="txt_instruction_2">Record audio to list your files here!</string>
+    <string name="txt_instruction_1">No records!</string>
+    <string name="confirm_dialog_text_yes">Yes</string>
+    <string name="confirm_dialog_txt_no">No</string>
+    <string name="btn_txt_delete_yes">Yes</string>
+    <string name="btn_txt_delete_no">No</string>
+    <string name="txt_delete_confirmation">Do you really want to delete the audio file?</string>
+    <string name="txt_audio_current_time_default">00:00</string>
+    <string name="txt_instruction_description">Record some audios to display</string>
+    <string name="txt_instruction_header">No audio Files</string>
+    <string name="txt_image_description_dummy">button</string>
+</resources>
