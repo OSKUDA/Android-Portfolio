@@ -50,15 +50,15 @@ This repo holds android applications developed by me during the course of ***lea
 * User input is *validated* before processing it
 
 ### What I learned?
-* Use *RecyclerView* with *GestureDetector* to intercept user inputs and act accordingly
-* Integrating *Guardian API* and learn about *API* architecture overall
-* Using *AsyncTask* multi-threading for downloading data over the internet
-* *Parsing and Validating* data from API
-* *Building* custom query to request the API
-* Integrate *exception handling* during downloads and parsing of data
-* Generate and work on *custom theme* including day/night mode
-* Design *custom layout* for txtView, editText and ImageView widgets 
-* Learned about *backward app compatibility* and how to deal with older versions
+* Use ***RecyclerView*** with ***GestureDetector*** to intercept user inputs and act accordingly
+* Integrating ***Guardian API*** and learn about ***API*** architecture overall
+* Using ***AsyncTask*** multi-threading for downloading data over the internet
+* ***Parsing and Validating*** data from API
+* ***Building*** custom query to request the API
+* Integrate ***exception handling*** during downloads and parsing of data
+* Generate and work on ***custom theme*** including day/night mode
+* Design ***custom layout*** for txtView, editText and ImageView widgets 
+* Learned about ***backward app compatibility*** and how to deal with older versions
 
 ## AudioRecorder
 #### *created an app to record & playback audio*
@@ -78,9 +78,9 @@ This repo holds android applications developed by me during the course of ***lea
 * Considers *orientation change* to preserve app lifecycle state
 
 ### What I learned?
-* Implement *tab & viewPager2* UI
-* Work with *fragments and its lifecycle*
-* Design and implement custom *Dialog fragments*
+* Implement ***tab & viewPager2*** UI
+* Work with ***fragments and its lifecycle***
+* Design and implement custom ***Dialog fragments***
 * Store, handle, and retrieve audio files
-* Preserve state on *Orientation change* and handle activity-fragment lifecycle
+* Preserve state on ***Orientation change*** and handle activity-fragment lifecycle
 * 5 minutes of reading documentation can save you 6 hours of debugging
